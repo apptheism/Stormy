@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stormy</string>
+    <string name="alert_dialog_title">Oh! Entschuldigung!</string>
+    <string name="alert_dialog_message">Ein Fehler! Bitte noch mal versuchen.</string>
+    <string name="alert_dialog_button_ok">OK</string>
+    <string name="network_state_toast_message">Entschuldigung! Kein Netzwerk erreichbar!</string>
+    <string name="powered_by_dark_sky"><a href="https://darksky.net/poweredby">Powered by Dark Sky</a></string>
+    <string name="houtly_forecast">VORSCHAU</string>
+    <string name="title_activity_hourly_forecast">HourlyForecastActivity</string>
+    <string name="language">de</string>
+</resources>

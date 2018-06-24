@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="hour"
+            type="com.apptheism.stormy.weather.Hour"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/hourlyListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        tools:background="@color/appBackground">
+
+        <TextView
+            android:id="@+id/tvTimeLabel"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@{String.valueOf(hour.time)}"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:text="13:25"/>
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tvTimeLabel"
+            android:layout_toRightOf="@id/tvTimeLabel"
+            app:imageResource="@{hour.icon}"
+            app:srcCompat="@drawable/partly_cloudy" />
+
+        <TextView
+            android:id="@+id/tvTemperatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:text="@{String.valueOf(hour.temperature)}"
+            tools:text="100° "/>
+
+        <TextView
+            android:id="@+id/tvSummaryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivIcon"
+            android:layout_toEndOf="@+id/ivIcon"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@{String.valueOf(hour.summary)}"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:text="Partly cloudy"/>
+
+    </RelativeLayout>
+</layout>
