@@ -97,7 +97,9 @@ public class MainActivity extends AppCompatActivity {
     private Hour[] getHourlyForecast(String jsonData) throws JSONException {
 
         JSONObject forecast = new JSONObject(jsonData);
+
         String timeZone = forecast.getString("timezone");
+
         JSONObject hourly = forecast.getJSONObject("hourly");
         JSONArray hourlyData = hourly.getJSONArray("data");
 
@@ -111,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
             hour.setSummary(jsonHour.getString("summary"));
             hour.setIcon(jsonHour.getString("icon"));
             hour.setTemperature(jsonHour.getDouble("temperature"));
-            hour.setTimezone(forecast.getString("timezone"));
+            hour.setTimezone(timeZone);
+            hour.setTime(jsonHour.getLong("time"));
 
             hours[i] = hour;
 
